@@ -885,10 +885,10 @@ index 3990254d1e65f..40a54f2238add 100644
 -#endif   /* ZSTD_H_ZSTD_STATIC_LINKING_ONLY */
  
 +#endif   /* ZSTD_H_ZSTD_STATIC_LINKING_ONLY */
-diff --git a/lib/zstd/Makefile b/lib/zstd/Makefile
+diff --git /lib/zstd/Makefile /lib/zstd/Makefile
 index 464c410b2768c..be218b5e0ed59 100644
---- a/lib/zstd/Makefile
-+++ b/lib/zstd/Makefile
+--- /lib/zstd/Makefile
++++ /lib/zstd/Makefile
 @@ -26,6 +26,7 @@ zstd_compress-y := \
  		compress/zstd_lazy.o \
  		compress/zstd_ldm.o \
@@ -897,10 +897,10 @@ index 464c410b2768c..be218b5e0ed59 100644
  
  zstd_decompress-y := \
  		zstd_decompress_module.o \
-diff --git a/lib/zstd/common/bits.h b/lib/zstd/common/bits.h
+diff --git /lib/zstd/common/bits.h /lib/zstd/common/bits.h
 index aa3487ec4b6a7..c5faaa3d7b08f 100644
---- a/lib/zstd/common/bits.h
-+++ b/lib/zstd/common/bits.h
+--- /lib/zstd/common/bits.h
++++ /lib/zstd/common/bits.h
 @@ -29,14 +29,15 @@ MEM_STATIC unsigned ZSTD_countTrailingZeros32_fallback(U32 val)
  MEM_STATIC unsigned ZSTD_countTrailingZeros32(U32 val)
  {
@@ -1000,10 +1000,10 @@ index aa3487ec4b6a7..c5faaa3d7b08f 100644
  }
  
  MEM_STATIC unsigned ZSTD_NbCommonBytes(size_t val)
-diff --git a/lib/zstd/common/bitstream.h b/lib/zstd/common/bitstream.h
+diff --git /lib/zstd/common/bitstream.h /lib/zstd/common/bitstream.h
 index 6a13f1f0f1e84..86439da0eea76 100644
---- a/lib/zstd/common/bitstream.h
-+++ b/lib/zstd/common/bitstream.h
+--- /lib/zstd/common/bitstream.h
++++ /lib/zstd/common/bitstream.h
 @@ -30,7 +30,6 @@
  #include "error_private.h"  /* error codes and messages */
  #include "bits.h"           /* ZSTD_highbit32 */
@@ -1178,10 +1178,10 @@ index 6a13f1f0f1e84..86439da0eea76 100644
  
 -
  #endif /* BITSTREAM_H_MODULE */
-diff --git a/lib/zstd/common/compiler.h b/lib/zstd/common/compiler.h
+diff --git /lib/zstd/common/compiler.h /lib/zstd/common/compiler.h
 index 508ee25537bb8..dc9bd15e174e9 100644
---- a/lib/zstd/common/compiler.h
-+++ b/lib/zstd/common/compiler.h
+--- /lib/zstd/common/compiler.h
++++ /lib/zstd/common/compiler.h
 @@ -150,9 +150,6 @@
  
  /* disable warnings */
@@ -1231,10 +1231,10 @@ index 508ee25537bb8..dc9bd15e174e9 100644
   * UBSAN.
   *
   * @returns lhs - rhs with wrapping
-diff --git a/lib/zstd/common/debug.h b/lib/zstd/common/debug.h
+diff --git /lib/zstd/common/debug.h /lib/zstd/common/debug.h
 index 226ba3c57ec34..c8a10281f112e 100644
---- a/lib/zstd/common/debug.h
-+++ b/lib/zstd/common/debug.h
+--- /lib/zstd/common/debug.h
++++ /lib/zstd/common/debug.h
 @@ -34,7 +34,6 @@
  #define DEBUG_H_12987983217
  
@@ -1250,10 +1250,10 @@ index 226ba3c57ec34..c8a10281f112e 100644
 -
 -
  #endif /* DEBUG_H_12987983217 */
-diff --git a/lib/zstd/common/error_private.c b/lib/zstd/common/error_private.c
+diff --git /lib/zstd/common/error_private.c /lib/zstd/common/error_private.c
 index a4062d30d1703..6c3dbad838b69 100644
---- a/lib/zstd/common/error_private.c
-+++ b/lib/zstd/common/error_private.c
+--- /lib/zstd/common/error_private.c
++++ /lib/zstd/common/error_private.c
 @@ -41,6 +41,7 @@ const char* ERR_getErrorString(ERR_enum code)
      case PREFIX(tableLog_tooLarge): return "tableLog requires too much memory : unsupported";
      case PREFIX(maxSymbolValue_tooLarge): return "Unsupported max Symbol Value : too large";
@@ -1262,10 +1262,10 @@ index a4062d30d1703..6c3dbad838b69 100644
      case PREFIX(stabilityCondition_notRespected): return "pledged buffer stability condition is not respected";
      case PREFIX(dictionary_corrupted): return "Dictionary is corrupted";
      case PREFIX(dictionary_wrong): return "Dictionary mismatch";
-diff --git a/lib/zstd/common/error_private.h b/lib/zstd/common/error_private.h
+diff --git /lib/zstd/common/error_private.h /lib/zstd/common/error_private.h
 index 0410ca415b547..08ee87b68ccab 100644
---- a/lib/zstd/common/error_private.h
-+++ b/lib/zstd/common/error_private.h
+--- /lib/zstd/common/error_private.h
++++ /lib/zstd/common/error_private.h
 @@ -14,8 +14,6 @@
  #ifndef ERROR_H_MODULE
  #define ERROR_H_MODULE
@@ -1289,10 +1289,10 @@ index 0410ca415b547..08ee87b68ccab 100644
  
 -
  #endif /* ERROR_H_MODULE */
-diff --git a/lib/zstd/common/fse.h b/lib/zstd/common/fse.h
+diff --git /lib/zstd/common/fse.h /lib/zstd/common/fse.h
 index 2185a578617de..b36ce7a2a8c3e 100644
---- a/lib/zstd/common/fse.h
-+++ b/lib/zstd/common/fse.h
+--- /lib/zstd/common/fse.h
++++ /lib/zstd/common/fse.h
 @@ -12,8 +12,6 @@
   * in the COPYING file in the root directory of this source tree).
   * You may select, at your option, one of the above-listed licenses.
@@ -1346,10 +1346,10 @@ index 2185a578617de..b36ce7a2a8c3e 100644
  #endif /* FSE_STATIC_LINKING_ONLY */
 -
 -
-diff --git a/lib/zstd/common/fse_decompress.c b/lib/zstd/common/fse_decompress.c
+diff --git /lib/zstd/common/fse_decompress.c /lib/zstd/common/fse_decompress.c
 index 3a17e84f27bfc..15081d8dc607c 100644
---- a/lib/zstd/common/fse_decompress.c
-+++ b/lib/zstd/common/fse_decompress.c
+--- /lib/zstd/common/fse_decompress.c
++++ /lib/zstd/common/fse_decompress.c
 @@ -191,6 +191,8 @@ FORCE_INLINE_TEMPLATE size_t FSE_decompress_usingDTable_generic(
      FSE_initDState(&state1, &bitD, dt);
      FSE_initDState(&state2, &bitD, dt);
@@ -1359,10 +1359,10 @@ index 3a17e84f27bfc..15081d8dc607c 100644
  #define FSE_GETSYMBOL(statePtr) fast ? FSE_decodeSymbolFast(statePtr, &bitD) : FSE_decodeSymbol(statePtr, &bitD)
  
      /* 4 symbols per loop */
-diff --git a/lib/zstd/common/huf.h b/lib/zstd/common/huf.h
+diff --git /lib/zstd/common/huf.h /lib/zstd/common/huf.h
 index 57462466e188c..49736dcd8f492 100644
---- a/lib/zstd/common/huf.h
-+++ b/lib/zstd/common/huf.h
+--- /lib/zstd/common/huf.h
++++ /lib/zstd/common/huf.h
 @@ -13,7 +13,6 @@
   * You may select, at your option, one of the above-listed licenses.
  ****************************************************************** */
@@ -1384,10 +1384,10 @@ index 57462466e188c..49736dcd8f492 100644
  
  #endif   /* HUF_H_298734234 */
 -
-diff --git a/lib/zstd/common/mem.h b/lib/zstd/common/mem.h
+diff --git /lib/zstd/common/mem.h /lib/zstd/common/mem.h
 index d9bd752fe17b1..2e91e7780c1fd 100644
---- a/lib/zstd/common/mem.h
-+++ b/lib/zstd/common/mem.h
+--- /lib/zstd/common/mem.h
++++ /lib/zstd/common/mem.h
 @@ -15,7 +15,7 @@
  /*-****************************************
  *  Dependencies
@@ -1397,10 +1397,10 @@ index d9bd752fe17b1..2e91e7780c1fd 100644
  #include <linux/compiler.h>  /* inline */
  #include <linux/swab.h>  /* swab32, swab64 */
  #include <linux/types.h>  /* size_t, ptrdiff_t */
-diff --git a/lib/zstd/common/portability_macros.h b/lib/zstd/common/portability_macros.h
+diff --git /lib/zstd/common/portability_macros.h /lib/zstd/common/portability_macros.h
 index f08638cced6c3..05286af726835 100644
---- a/lib/zstd/common/portability_macros.h
-+++ b/lib/zstd/common/portability_macros.h
+--- /lib/zstd/common/portability_macros.h
++++ /lib/zstd/common/portability_macros.h
 @@ -52,26 +52,29 @@
  # define ZSTD_HIDE_ASM_FUNCTION(func)
  #endif
@@ -1439,10 +1439,10 @@ index f08638cced6c3..05286af726835 100644
   * work, but they haven't been tested. This could likely be
   * extended to BSD systems.
   *
-diff --git a/lib/zstd/common/zstd_internal.h b/lib/zstd/common/zstd_internal.h
+diff --git /lib/zstd/common/zstd_internal.h /lib/zstd/common/zstd_internal.h
 index 11da1233e8909..52a79435caf66 100644
---- a/lib/zstd/common/zstd_internal.h
-+++ b/lib/zstd/common/zstd_internal.h
+--- /lib/zstd/common/zstd_internal.h
++++ /lib/zstd/common/zstd_internal.h
 @@ -33,7 +33,6 @@
  #include <linux/xxhash.h>                /* XXH_reset, update, digest */
  #define ZSTD_TRACE 0
@@ -1540,10 +1540,10 @@ index 11da1233e8909..52a79435caf66 100644
  
 -
  #endif   /* ZSTD_CCOMMON_H_MODULE */
-diff --git a/lib/zstd/compress/hist.c b/lib/zstd/compress/hist.c
+diff --git /lib/zstd/compress/hist.c /lib/zstd/compress/hist.c
 index 0b12587cc14b1..87145a2d91603 100644
---- a/lib/zstd/compress/hist.c
-+++ b/lib/zstd/compress/hist.c
+--- /lib/zstd/compress/hist.c
++++ /lib/zstd/compress/hist.c
 @@ -27,6 +27,16 @@ unsigned HIST_isError(size_t code) { return ERR_isError(code); }
  /*-**************************************************************
   *  Histogram functions
@@ -1561,10 +1561,10 @@ index 0b12587cc14b1..87145a2d91603 100644
  unsigned HIST_count_simple(unsigned* count, unsigned* maxSymbolValuePtr,
                             const void* src, size_t srcSize)
  {
-diff --git a/lib/zstd/compress/hist.h b/lib/zstd/compress/hist.h
+diff --git /lib/zstd/compress/hist.h /lib/zstd/compress/hist.h
 index f7687b0fc20a0..e5d57d79e4d56 100644
---- a/lib/zstd/compress/hist.h
-+++ b/lib/zstd/compress/hist.h
+--- /lib/zstd/compress/hist.h
++++ /lib/zstd/compress/hist.h
 @@ -74,3 +74,10 @@ size_t HIST_countFast_wksp(unsigned* count, unsigned* maxSymbolValuePtr,
   */
  unsigned HIST_count_simple(unsigned* count, unsigned* maxSymbolValuePtr,
@@ -1576,10 +1576,10 @@ index f7687b0fc20a0..e5d57d79e4d56 100644
 + @  This function does not need any additional stack memory.
 + */
 +void HIST_add(unsigned* count, const void* src, size_t srcSize);
-diff --git a/lib/zstd/compress/zstd_compress.c b/lib/zstd/compress/zstd_compress.c
+diff --git /lib/zstd/compress/zstd_compress.c /lib/zstd/compress/zstd_compress.c
 index 73dbb9bc66e4b..e168df9c17109 100644
---- a/lib/zstd/compress/zstd_compress.c
-+++ b/lib/zstd/compress/zstd_compress.c
+--- /lib/zstd/compress/zstd_compress.c
++++ /lib/zstd/compress/zstd_compress.c
 @@ -15,6 +15,7 @@
  #include "../common/allocations.h"  /* ZSTD_customMalloc, ZSTD_customCalloc, ZSTD_customFree */
  #include "../common/zstd_deps.h"  /* INT_MAX, ZSTD_memset, ZSTD_memcpy */
@@ -4471,10 +4471,10 @@ index 73dbb9bc66e4b..e168df9c17109 100644
      assert(params != NULL);
      if (extSeqProdFunc != NULL) {
          params->extSeqProdFunc = extSeqProdFunc;
-diff --git a/lib/zstd/compress/zstd_compress_internal.h b/lib/zstd/compress/zstd_compress_internal.h
+diff --git /lib/zstd/compress/zstd_compress_internal.h /lib/zstd/compress/zstd_compress_internal.h
 index 53cb582a8d2b5..b109783858763 100644
---- a/lib/zstd/compress/zstd_compress_internal.h
-+++ b/lib/zstd/compress/zstd_compress_internal.h
+--- /lib/zstd/compress/zstd_compress_internal.h
++++ /lib/zstd/compress/zstd_compress_internal.h
 @@ -22,7 +22,7 @@
  #include "../common/zstd_internal.h"
  #include "zstd_cwksp.h"
@@ -5121,10 +5121,10 @@ index 53cb582a8d2b5..b109783858763 100644
  /* Returns 1 if an external sequence producer is registered, otherwise returns 0. */
  MEM_STATIC int ZSTD_hasExtSeqProd(const ZSTD_CCtx_params* params) {
      return params->extSeqProdFunc != NULL;
-diff --git a/lib/zstd/compress/zstd_compress_literals.c b/lib/zstd/compress/zstd_compress_literals.c
+diff --git /lib/zstd/compress/zstd_compress_literals.c /lib/zstd/compress/zstd_compress_literals.c
 index 3e9ea46a670a6..ec39b4299b6fd 100644
---- a/lib/zstd/compress/zstd_compress_literals.c
-+++ b/lib/zstd/compress/zstd_compress_literals.c
+--- /lib/zstd/compress/zstd_compress_literals.c
++++ /lib/zstd/compress/zstd_compress_literals.c
 @@ -141,7 +141,7 @@ size_t ZSTD_compressLiterals (
      size_t const lhSize = 3 + (srcSize >= 1 KB) + (srcSize >= 16 KB);
      BYTE*  const ostart = (BYTE*)dst;
@@ -5134,10 +5134,10 @@ index 3e9ea46a670a6..ec39b4299b6fd 100644
      size_t cLitSize;
  
      DEBUGLOG(5,"ZSTD_compressLiterals (disableLiteralCompression=%i, srcSize=%u, dstCapacity=%zu)",
-diff --git a/lib/zstd/compress/zstd_compress_sequences.c b/lib/zstd/compress/zstd_compress_sequences.c
+diff --git /lib/zstd/compress/zstd_compress_sequences.c /lib/zstd/compress/zstd_compress_sequences.c
 index 5c028c78d889b..256980c9d85ad 100644
---- a/lib/zstd/compress/zstd_compress_sequences.c
-+++ b/lib/zstd/compress/zstd_compress_sequences.c
+--- /lib/zstd/compress/zstd_compress_sequences.c
++++ /lib/zstd/compress/zstd_compress_sequences.c
 @@ -154,13 +154,13 @@ size_t ZSTD_crossEntropyCost(short const* norm, unsigned accuracyLog,
      return cost >> 8;
  }
@@ -5199,10 +5199,10 @@ index 5c028c78d889b..256980c9d85ad 100644
  {
      DEBUGLOG(5, "ZSTD_encodeSequences: dstCapacity = %u", (unsigned)dstCapacity);
  #if DYNAMIC_BMI2
-diff --git a/lib/zstd/compress/zstd_compress_sequences.h b/lib/zstd/compress/zstd_compress_sequences.h
+diff --git /lib/zstd/compress/zstd_compress_sequences.h /lib/zstd/compress/zstd_compress_sequences.h
 index 7fe6f4ff5cf25..14fdccb6547fd 100644
---- a/lib/zstd/compress/zstd_compress_sequences.h
-+++ b/lib/zstd/compress/zstd_compress_sequences.h
+--- /lib/zstd/compress/zstd_compress_sequences.h
++++ /lib/zstd/compress/zstd_compress_sequences.h
 @@ -12,26 +12,27 @@
  #ifndef ZSTD_COMPRESS_SEQUENCES_H
  #define ZSTD_COMPRESS_SEQUENCES_H
@@ -5245,10 +5245,10 @@ index 7fe6f4ff5cf25..14fdccb6547fd 100644
  
  size_t ZSTD_fseBitCost(
      FSE_CTable const* ctable,
-diff --git a/lib/zstd/compress/zstd_compress_superblock.c b/lib/zstd/compress/zstd_compress_superblock.c
+diff --git /lib/zstd/compress/zstd_compress_superblock.c /lib/zstd/compress/zstd_compress_superblock.c
 index 41f6521b27cd3..dc12d64e935c4 100644
---- a/lib/zstd/compress/zstd_compress_superblock.c
-+++ b/lib/zstd/compress/zstd_compress_superblock.c
+--- /lib/zstd/compress/zstd_compress_superblock.c
++++ /lib/zstd/compress/zstd_compress_superblock.c
 @@ -52,7 +52,7 @@ ZSTD_compressSubBlock_literal(const HUF_CElt* hufTable,
      BYTE* const oend = ostart + dstSize;
      BYTE* op = ostart + lhSize;
@@ -5371,10 +5371,10 @@ index 41f6521b27cd3..dc12d64e935c4 100644
 -            zc->entropyWorkspace, ENTROPY_WORKSPACE_SIZE /* statically allocated in resetCCtx */);
 +            zc->tmpWorkspace, zc->tmpWkspSize /* statically allocated in resetCCtx */);
  }
-diff --git a/lib/zstd/compress/zstd_cwksp.h b/lib/zstd/compress/zstd_cwksp.h
+diff --git /lib/zstd/compress/zstd_cwksp.h /lib/zstd/compress/zstd_cwksp.h
 index 86bc3c2c23c77..dce42f653bae0 100644
---- a/lib/zstd/compress/zstd_cwksp.h
-+++ b/lib/zstd/compress/zstd_cwksp.h
+--- /lib/zstd/compress/zstd_cwksp.h
++++ /lib/zstd/compress/zstd_cwksp.h
 @@ -18,7 +18,7 @@
  #include "../common/allocations.h"  /* ZSTD_customMalloc, ZSTD_customFree */
  #include "../common/zstd_internal.h"
@@ -5529,10 +5529,10 @@ index 86bc3c2c23c77..dce42f653bae0 100644
  
 -
  #endif /* ZSTD_CWKSP_H */
-diff --git a/lib/zstd/compress/zstd_double_fast.c b/lib/zstd/compress/zstd_double_fast.c
+diff --git /lib/zstd/compress/zstd_double_fast.c /lib/zstd/compress/zstd_double_fast.c
 index 5ff54f17d92f0..995e83f3a183b 100644
---- a/lib/zstd/compress/zstd_double_fast.c
-+++ b/lib/zstd/compress/zstd_double_fast.c
+--- /lib/zstd/compress/zstd_double_fast.c
++++ /lib/zstd/compress/zstd_double_fast.c
 @@ -16,7 +16,7 @@
  
  static
@@ -5806,10 +5806,10 @@ index 5ff54f17d92f0..995e83f3a183b 100644
          void const* src, size_t srcSize)
  {
      U32 const mls = ms->cParams.minMatch;
-diff --git a/lib/zstd/compress/zstd_double_fast.h b/lib/zstd/compress/zstd_double_fast.h
+diff --git /lib/zstd/compress/zstd_double_fast.h /lib/zstd/compress/zstd_double_fast.h
 index b7ddc714f13ed..011556ce56f78 100644
---- a/lib/zstd/compress/zstd_double_fast.h
-+++ b/lib/zstd/compress/zstd_double_fast.h
+--- /lib/zstd/compress/zstd_double_fast.h
++++ /lib/zstd/compress/zstd_double_fast.h
 @@ -12,24 +12,23 @@
  #ifndef ZSTD_DOUBLE_FAST_H
  #define ZSTD_DOUBLE_FAST_H
@@ -5845,10 +5845,10 @@ index b7ddc714f13ed..011556ce56f78 100644
  
 -
  #endif /* ZSTD_DOUBLE_FAST_H */
-diff --git a/lib/zstd/compress/zstd_fast.c b/lib/zstd/compress/zstd_fast.c
+diff --git /lib/zstd/compress/zstd_fast.c /lib/zstd/compress/zstd_fast.c
 index b7a63ba4ce568..60e07e839e5f5 100644
---- a/lib/zstd/compress/zstd_fast.c
-+++ b/lib/zstd/compress/zstd_fast.c
+--- /lib/zstd/compress/zstd_fast.c
++++ /lib/zstd/compress/zstd_fast.c
 @@ -14,7 +14,7 @@
  
  static
@@ -6219,10 +6219,10 @@ index b7a63ba4ce568..60e07e839e5f5 100644
          void const* src, size_t srcSize)
  {
      U32 const mls = ms->cParams.minMatch;
-diff --git a/lib/zstd/compress/zstd_fast.h b/lib/zstd/compress/zstd_fast.h
+diff --git /lib/zstd/compress/zstd_fast.h /lib/zstd/compress/zstd_fast.h
 index e64d9e1b2d393..04fde0a72a4e0 100644
---- a/lib/zstd/compress/zstd_fast.h
-+++ b/lib/zstd/compress/zstd_fast.h
+--- /lib/zstd/compress/zstd_fast.h
++++ /lib/zstd/compress/zstd_fast.h
 @@ -12,22 +12,20 @@
  #ifndef ZSTD_FAST_H
  #define ZSTD_FAST_H
@@ -6250,10 +6250,10 @@ index e64d9e1b2d393..04fde0a72a4e0 100644
  
 -
  #endif /* ZSTD_FAST_H */
-diff --git a/lib/zstd/compress/zstd_lazy.c b/lib/zstd/compress/zstd_lazy.c
+diff --git /lib/zstd/compress/zstd_lazy.c /lib/zstd/compress/zstd_lazy.c
 index 3e88d8a1a1365..88e2501fe3ef0 100644
---- a/lib/zstd/compress/zstd_lazy.c
-+++ b/lib/zstd/compress/zstd_lazy.c
+--- /lib/zstd/compress/zstd_lazy.c
++++ /lib/zstd/compress/zstd_lazy.c
 @@ -27,7 +27,7 @@
  
  static
@@ -6799,10 +6799,10 @@ index 3e88d8a1a1365..88e2501fe3ef0 100644
          void const* src, size_t srcSize)
  
  {
-diff --git a/lib/zstd/compress/zstd_lazy.h b/lib/zstd/compress/zstd_lazy.h
+diff --git /lib/zstd/compress/zstd_lazy.h /lib/zstd/compress/zstd_lazy.h
 index 22c9201f4e632..987a036d8bdeb 100644
---- a/lib/zstd/compress/zstd_lazy.h
-+++ b/lib/zstd/compress/zstd_lazy.h
+--- /lib/zstd/compress/zstd_lazy.h
++++ /lib/zstd/compress/zstd_lazy.h
 @@ -12,7 +12,6 @@
  #ifndef ZSTD_LAZY_H
  #define ZSTD_LAZY_H
@@ -6959,10 +6959,10 @@ index 22c9201f4e632..987a036d8bdeb 100644
 -
 -
  #endif /* ZSTD_LAZY_H */
-diff --git a/lib/zstd/compress/zstd_ldm.c b/lib/zstd/compress/zstd_ldm.c
+diff --git /lib/zstd/compress/zstd_ldm.c /lib/zstd/compress/zstd_ldm.c
 index 07f3bc6437ce6..54eefad9cae6c 100644
---- a/lib/zstd/compress/zstd_ldm.c
-+++ b/lib/zstd/compress/zstd_ldm.c
+--- /lib/zstd/compress/zstd_ldm.c
++++ /lib/zstd/compress/zstd_ldm.c
 @@ -17,7 +17,7 @@
  #include "zstd_double_fast.h"   /* ZSTD_fillDoubleHashTable() */
  #include "zstd_ldm_geartab.h"
@@ -7191,10 +7191,10 @@ index 07f3bc6437ce6..54eefad9cae6c 100644
          ZSTD_selectBlockCompressor(cParams->strategy, useRowMatchFinder, ZSTD_matchState_dictMode(ms));
      /* Input bounds */
      BYTE const* const istart = (BYTE const*)src;
-diff --git a/lib/zstd/compress/zstd_ldm.h b/lib/zstd/compress/zstd_ldm.h
+diff --git /lib/zstd/compress/zstd_ldm.h /lib/zstd/compress/zstd_ldm.h
 index c540731abde72..41400a7191b20 100644
---- a/lib/zstd/compress/zstd_ldm.h
-+++ b/lib/zstd/compress/zstd_ldm.h
+--- /lib/zstd/compress/zstd_ldm.h
++++ /lib/zstd/compress/zstd_ldm.h
 @@ -12,7 +12,6 @@
  #ifndef ZSTD_LDM_H
  #define ZSTD_LDM_H
@@ -7249,10 +7249,10 @@ index c540731abde72..41400a7191b20 100644
  
 -
  #endif /* ZSTD_FAST_H */
-diff --git a/lib/zstd/compress/zstd_opt.c b/lib/zstd/compress/zstd_opt.c
+diff --git /lib/zstd/compress/zstd_opt.c /lib/zstd/compress/zstd_opt.c
 index 325526eeb8a1a..db312ac5304ea 100644
---- a/lib/zstd/compress/zstd_opt.c
-+++ b/lib/zstd/compress/zstd_opt.c
+--- /lib/zstd/compress/zstd_opt.c
++++ /lib/zstd/compress/zstd_opt.c
 @@ -421,7 +421,7 @@ MEM_STATIC U32 ZSTD_readMINMATCH(const void* memPtr, U32 length)
     Assumption : always within prefix (i.e. not within extDict) */
  static
@@ -7643,10 +7643,10 @@ index 325526eeb8a1a..db312ac5304ea 100644
          const void* src, size_t srcSize)
  {
      return ZSTD_compressBlock_opt2(ms, seqStore, rep, src, srcSize, ZSTD_extDict);
-diff --git a/lib/zstd/compress/zstd_opt.h b/lib/zstd/compress/zstd_opt.h
+diff --git /lib/zstd/compress/zstd_opt.h /lib/zstd/compress/zstd_opt.h
 index ac1b743d27cd1..fbdc540ec9d1c 100644
---- a/lib/zstd/compress/zstd_opt.h
-+++ b/lib/zstd/compress/zstd_opt.h
+--- /lib/zstd/compress/zstd_opt.h
++++ /lib/zstd/compress/zstd_opt.h
 @@ -12,25 +12,24 @@
  #ifndef ZSTD_OPT_H
  #define ZSTD_OPT_H
@@ -7708,11 +7708,11 @@ index ac1b743d27cd1..fbdc540ec9d1c 100644
  
 -
  #endif /* ZSTD_OPT_H */
-diff --git a/lib/zstd/compress/zstd_preSplit.c b/lib/zstd/compress/zstd_preSplit.c
+diff --git /lib/zstd/compress/zstd_preSplit.c /lib/zstd/compress/zstd_preSplit.c
 new file mode 100644
 index 0000000000000..7d9403c9a3bc8
 --- /dev/null
-+++ b/lib/zstd/compress/zstd_preSplit.c
++++ /lib/zstd/compress/zstd_preSplit.c
 @@ -0,0 +1,239 @@
 +// SPDX-License-Identifier: GPL-2.0+ OR BSD-3-Clause
 +/*
@@ -7953,11 +7953,11 @@ index 0000000000000..7d9403c9a3bc8
 +    /* level >= 1*/
 +    return ZSTD_splitBlock_byChunks(blockStart, blockSize, level-1, workspace, wkspSize);
 +}
-diff --git a/lib/zstd/compress/zstd_preSplit.h b/lib/zstd/compress/zstd_preSplit.h
+diff --git /lib/zstd/compress/zstd_preSplit.h /lib/zstd/compress/zstd_preSplit.h
 new file mode 100644
 index 0000000000000..f98f797fe1911
 --- /dev/null
-+++ b/lib/zstd/compress/zstd_preSplit.h
++++ /lib/zstd/compress/zstd_preSplit.h
 @@ -0,0 +1,34 @@
 +/* SPDX-License-Identifier: GPL-2.0+ OR BSD-3-Clause */
 +/*
@@ -7993,10 +7993,10 @@ index 0000000000000..f98f797fe1911
 +                    void* workspace, size_t wkspSize);
 +
 +#endif /* ZSTD_PRESPLIT_H */
-diff --git a/lib/zstd/decompress/zstd_decompress.c b/lib/zstd/decompress/zstd_decompress.c
+diff --git /lib/zstd/decompress/zstd_decompress.c /lib/zstd/decompress/zstd_decompress.c
 index 049b8aae43fa4..febd83c358f43 100644
---- a/lib/zstd/decompress/zstd_decompress.c
-+++ b/lib/zstd/decompress/zstd_decompress.c
+--- /lib/zstd/decompress/zstd_decompress.c
++++ /lib/zstd/decompress/zstd_decompress.c
 @@ -428,7 +428,7 @@ size_t ZSTD_frameHeaderSize(const void* src, size_t srcSize)
   * @return : 0, `zfhPtr` is correctly filled,
   *          >0, `srcSize` is too small, value is wanted `srcSize` amount,
@@ -8107,10 +8107,10 @@ index 049b8aae43fa4..febd83c358f43 100644
      RETURN_ERROR_IF(
          input->pos > input->size,
          srcSize_wrong,
-diff --git a/lib/zstd/decompress/zstd_decompress_block.c b/lib/zstd/decompress/zstd_decompress_block.c
+diff --git /lib/zstd/decompress/zstd_decompress_block.c /lib/zstd/decompress/zstd_decompress_block.c
 index 9fe9a12c8a2c0..710eb0ffd5a37 100644
---- a/lib/zstd/decompress/zstd_decompress_block.c
-+++ b/lib/zstd/decompress/zstd_decompress_block.c
+--- /lib/zstd/decompress/zstd_decompress_block.c
++++ /lib/zstd/decompress/zstd_decompress_block.c
 @@ -140,7 +140,7 @@ static size_t ZSTD_decodeLiteralsBlock(ZSTD_DCtx* dctx,
      RETURN_ERROR_IF(srcSize < MIN_CBLOCK_SIZE, corruption_detected, "");
  
@@ -8164,10 +8164,10 @@ index 9fe9a12c8a2c0..710eb0ffd5a37 100644
  #ifndef ZSTD_FORCE_DECOMPRESS_SEQUENCES_LONG
  static size_t
  ZSTD_decompressSequences(ZSTD_DCtx* dctx, void* dst, size_t maxDstSize,
-diff --git a/lib/zstd/decompress/zstd_decompress_internal.h b/lib/zstd/decompress/zstd_decompress_internal.h
+diff --git /lib/zstd/decompress/zstd_decompress_internal.h /lib/zstd/decompress/zstd_decompress_internal.h
 index 0f02526be7744..2a225d1811c4f 100644
---- a/lib/zstd/decompress/zstd_decompress_internal.h
-+++ b/lib/zstd/decompress/zstd_decompress_internal.h
+--- /lib/zstd/decompress/zstd_decompress_internal.h
++++ /lib/zstd/decompress/zstd_decompress_internal.h
 @@ -137,7 +137,7 @@ struct ZSTD_DCtx_s
      const void* virtualStart;     /* virtual start of previous segment if it was just before current one */
      const void* dictEnd;          /* end of previous segment */
@@ -8201,10 +8201,10 @@ index 0f02526be7744..2a225d1811c4f 100644
  #endif
  }
  
-diff --git a/lib/zstd/zstd_compress_module.c b/lib/zstd/zstd_compress_module.c
+diff --git /lib/zstd/zstd_compress_module.c /lib/zstd/zstd_compress_module.c
 index 9077139ece0df..ab4bcf50d4ee2 100644
---- a/lib/zstd/zstd_compress_module.c
-+++ b/lib/zstd/zstd_compress_module.c
+--- /lib/zstd/zstd_compress_module.c
++++ /lib/zstd/zstd_compress_module.c
 @@ -16,6 +16,7 @@
  
  #include "common/zstd_deps.h"
