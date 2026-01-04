@@ -7,9 +7,9 @@
           name="clo-la"/>
 
   <project remote="github-common"
-           name="StarRivers-2333/android_kernel_common_oneplus_sm8550"
+           name="StarRivers-2333/StarKernel-SM8550-SKI"
            path="kernel_platform/common"
-           revision="oneplus/sm8550_b_16.0.0_oneplus_open">
+           revision="2026-01-05">
     <linkfile dest=".source_date_epoch_dir" src="."/>
   </project>
 
